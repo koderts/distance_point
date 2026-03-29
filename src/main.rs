@@ -37,19 +37,23 @@ fn main() {
         "---------------------------------------------------------------------------------------"
     );
 
-    println!("This is {:.3} something.", x);
+    println!(
+        "The distance from the origin of point {} is {:.3}.",
+        point2, x
+    );
 
-    println!("The distance between {} and {} is {:.3}", point1, point2, d);
+    println!(
+        "The distance between {} and {} is {:.3}.",
+        point1, point2, d
+    );
     println!(
         "---------------------------------------------------------------------------------------"
     );
 }
 
 fn distance_between_points(a: &Point, b: &Point) -> f64 {
-    println!("THIS IS: {:?} AND : {:?}", a, b);
     let x_distance = (b.x - a.x).pow(2);
     let y_distance = (b.y - a.y).pow(2);
-    let distance = ((x_distance + y_distance) as f64).sqrt();
 
-    return distance;
+    ((x_distance + y_distance) as f64).sqrt()
 }
